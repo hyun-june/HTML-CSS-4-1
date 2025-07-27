@@ -1,0 +1,152 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  background-color: #f9e8ee;
+  height: 100%;
+  display: flex;
+
+  & button {
+    background-color: transparent;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
+  }
+}
+
+.mobile_container {
+  width: 428px;
+  height: 761px;
+  border-radius: 30px;
+  margin: auto;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0px 0px 10px 0px #ddd;
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.3em;
+  min-height: 40px;
+}
+
+.nav_input {
+  display: flex;
+  align-items: center;
+
+  & input {
+    height: 30px;
+    border-radius: 12px;
+    padding-left: 1em;
+    border: 1px solid #333333;
+    display: none;
+  }
+
+  & input:focus {
+    border: none;
+    outline: 2px solid #333333;
+  }
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2em 0 0 0;
+
+  & img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+  }
+
+  & h1 {
+    margin: 16px 0;
+  }
+}
+
+#info-btn {
+  height: 30px;
+  display: flex;
+  align-items: center;
+  gap: 0.2em;
+  font-size: 20px;
+}
+
+#info-icon {
+  font-size: 0.8em;
+}
+
+table {
+  width: 100%;
+  display: none;
+  tr {
+    height: 33.5px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  th {
+    background-color: #1b1a20;
+    color: white;
+    width: 25%;
+    border: 1px solid #ddd;
+    height: 100%;
+    box-sizing: border-box;
+    justify-content: center;
+  }
+
+  td {
+    display: flex;
+    align-items: center;
+    padding-left: 1em;
+    flex: 1;
+    border: 1px solid #ddd;
+    height: 100%;
+    box-sizing: border-box;
+  }
+
+  #japan {
+    width: 24px;
+    height: 16px;
+    border: 1px solid #ddd;
+  }
+
+  a {
+    display: flex;
+    position: relative;
+  }
+
+  a::after {
+    content: "";
+    width: 2px;
+    height: 80%;
+
+    position: absolute;
+    right: -5px;
+    background-color: gray;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  a:last-of-type::after {
+    display: none;
+  }
+
+  .link {
+    gap: 0.5em;
+  }
+
+  .link-icon {
+    width: 24px;
+    height: 24px;
+  }
+}
