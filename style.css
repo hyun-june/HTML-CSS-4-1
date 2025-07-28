@@ -20,8 +20,10 @@ table {
   thead {
     color: white;
     background-color: black;
+    height: 40px;
   }
   td {
     border: 1px solid #ddd;
+    height: 30px;
   }
 }
