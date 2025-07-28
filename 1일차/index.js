@@ -28,3 +28,38 @@ infoBtn.addEventListener("click", () => {
     infoIcon.textContent = "▼";
   }
 });
+
+const audio = document.querySelector("audio");
+const audioBtn = document.getElementById("audio-btn");
+const volumeController = document.getElementById("volume");
+const volumeBtn = document.getElementById("volume-btn");
+let volumeStatus = false;
+volumeController.style.display = "none";
+
+volumeBtn.addEventListener("click", () => {
+  volumeStatus = !volumeStatus;
+  if (!volumeStatus) {
+    volumeController.style.display = "none";
+  } else {
+    volumeController.style.display = "block";
+  }
+});
+
+audioBtn.addEventListener("click", () => {
+  if (audio.paused) {
+    audio.play();
+    audioBtn.textContent = "⏸";
+  } else {
+    audio.pause();
+    audioBtn.textContent = "▶";
+  }
+});
+
+audio.addEventListener("ended", () => {
+  audioBtn.textContent = "▶";
+});
+
+audio.volume = volumeController.value;
+volumeController.addEventListener("input", () => {
+  audio.volume = volumeController.value;
+});
